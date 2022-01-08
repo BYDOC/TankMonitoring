@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<LastStatusViewModel>
+
+@*<link href="~/css/tankStyle.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>*@
+@*<script src="~/js/tankScript.js"></script>*@
+
+<meta http-equiv="refresh" content="30"/>
+<div class="row">
+  
+      
+      @foreach (var item in Model)
+      {
+
+          ViewData["levelV"] = item.Level;
+          ViewData["RVAL"] = item.R_Val;
+          ViewData["GVAL"] = item.G_Val;
+          ViewData["BVAL"] = item.B_Val;
+          ViewData["CapacityTankV"] = item.CapacityHeight;
+
+
+
+
+
+
+        <div class="card" style="width: 28rem;color:white">
+            <input type="button" class="btn btn-primary" value="Details" style="width:120px" onclick="location.href='@Url.Action("Details","Tank",new { id=item.TankID})'" />
+            <partial name="_TankPartial.cshtml" model="@Model" view-data="ViewData" />
+            <div class="card-body">
+                <h5 class="card-title" style="width: 28rem;color:black">@item.Name</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>Product Name:</b> @item.ProductName</li>
+                <li class="list-group-item"><b>Level:</b> @item.Level m</li>
+                <li class="list-group-item"><b>TOV:</b> @item.TOV m³</li>
+                <li class="list-group-item"><b>Flow Rate:</b> @item.FlowRate m³/h </li>
+                <li class="list-group-item"><b>Net Standart Volume:</b> @item.NSV m³ </li>
+                <li class="list-group-item"><b>Weight in Air:</b> @item.WIA ton</li>
+                <li class="list-group-item"><b>Available Rooms:</b> @item.GetAvailableRoom() m³</li>
+                <li class="list-group-item"><b>Density:</b> @item.Density kg/m³ </li>
+                <li class="list-group-item"><b>Avg Temp:</b> @item.AvgTemp °C</li>
+
+
+
+
+            </ul>
+        </div>
+
+    }
+
+</div>
+

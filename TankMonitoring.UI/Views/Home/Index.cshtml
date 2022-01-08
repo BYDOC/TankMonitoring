@@ -1,0 +1,86 @@
+﻿@model LastStatusViewModel
+<!DOCTYPE html>
+.
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+
+
+<h1>Home/index</h1>
+
+<a asp-action="Login" asp-controller="Account">Login</a>
+<br />
+<a asp-action="Index" asp-controller="Tank">Tank List</a>
+<br />
+<a asp-action="CardView" asp-controller="Tank">Card View</a>
+<br />
+<a asp-action="TankHistorian" asp-controller="Tank">TankHistorian</a>
+<br />
+<a asp-action="HistFilter" asp-controller="Tank">HistFilter</a>
+<br />
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+    
+    <style type="text/css">
+        .container {
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            width: 5%;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.14.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            $('#datetimepicker1').datetimepicker();
+        });
+    </script>
+
+</head>
+<body>
+
+    <div class="container">
+
+
+
+        <form asp-action="TankHistorian" asp-controller="Tank" method="post">
+            TankNameF:@Html.TextBoxFor(model1 => model1.TankNameF)
+            <div class='col-md-6'>
+                <div class="form-group">
+
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text'  class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Apply">
+        </form>
+
+
+</body>
+</html>

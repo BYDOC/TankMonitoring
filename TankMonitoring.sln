@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TankMonitoring.UI", "TankMonitoring.UI\TankMonitoring.UI.csproj", "{9E849279-607B-44CF-85EF-0B0E30866390}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankMonitoring.Data", "TankMonitoring.Data\TankMonitoring.Data.csproj", "{7D568B16-A692-4A9C-8B73-0C04980BBBD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E849279-607B-44CF-85EF-0B0E30866390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E849279-607B-44CF-85EF-0B0E30866390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E849279-607B-44CF-85EF-0B0E30866390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E849279-607B-44CF-85EF-0B0E30866390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D568B16-A692-4A9C-8B73-0C04980BBBD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D568B16-A692-4A9C-8B73-0C04980BBBD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D568B16-A692-4A9C-8B73-0C04980BBBD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D568B16-A692-4A9C-8B73-0C04980BBBD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1E0CE0B-A780-4689-8D79-49BCE23995B2}
+	EndGlobalSection
+EndGlobal

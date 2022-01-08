@@ -1,0 +1,33 @@
+﻿@model IEnumerable<LastStatusViewModel>
+@ViewData["levelV"]
+@ViewData["RVAL"]
+@ViewData["GVAL"]
+@ViewData["BVAL"]
+@ViewData["CapacityTankV"]
+<link href="~/css/tankStyle.css" rel="stylesheet" />
+@*<script src="~/js/tankScript.js"></script>*@
+@{ var level = Convert.ToDouble(ViewData["levelV"]);
+    var CapaTank = Convert.ToDouble(ViewData["CapacityTankV"]);
+    var calcHeight = (100 -level);
+    string heightx = Convert.ToString(calcHeight);
+    string tot = heightx + "%";
+
+    var R = ViewData["RVAL"];
+    var G = ViewData["GVAL"];
+    var B = ViewData["BVAL"];
+    var TheRgb = "rgb(" + R + "," + G + "," + B + ")";
+}
+
+
+<div class="tk" data-amount="@level" style="background:@TheRgb">
+
+    @(ViewData["levelV"])
+
+    <div class="green" style="height:@calcHeight%"></div>
+    @*@calcHeight
+        @CapaTank*@
+
+
+</div>
+
+

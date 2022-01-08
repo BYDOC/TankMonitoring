@@ -1,0 +1,85 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model LastStatusViewModel
+<h1>Details Page for @Model.Name</h1>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <th scope="row" style="width:200px">Level</th>
+            <td style="width:250px">@Model.Level</td>
+            <th scope="row" style="width:200px">Product Name</th>
+            <td style="width:250px">@Model.ProductName</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Flow Rate</th>
+            <td style="width:250px">@Model.FlowRate</td>
+            <th scope="row" style="width:200px">Volume Table</th>
+            <td style="width:250px">*****</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Avg. Temp</th>
+            <td style="width:250px">@Model.AvgTemp</td>
+            <th scope="row" style="width:200px">Vapor Pressure</th>
+            <td style="width:250px">@Model.VaporPressure</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Observed Density</th>
+            <td style="width:250px">@Model.Density</td>
+            <th scope="row" style="width:200px">Reference Density</th>
+            <td style="width:250px">*****</td>
+        </tr>
+        <th style="font-size:25px">Sediment and Water</th>
+        <tr>
+            <th scope="row" style="width:200px">Sediment and Water</th>
+            <td style="width:250px">*****</td>
+            <th scope="row" style="width:200px">TEC of Liquid</th>
+            <td style="width:250px">*****</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Free Water Level</th>
+            <td style="width:250px">*****</td>
+            <th scope="row" style="width:200px">Volume Correction Factor</th>
+            <td style="width:250px">@Model.VCF</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Free Water Volume</th>
+            <td style="width:250px">*****</td>
+        </tr>
+<th style="font-size:25px">Volumes</th>
+        <tr>
+            <th scope="row" style="width:200px">Max Volume</th>
+            <td style="width:250px">@Model.CapacityHeight</td>
+            <th scope="row" style="width:200px">Pumpable</th>
+            <td style="width:250px">*****</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Total Observed Volume</th>
+            <td style="width:250px">@Model.TOV</td>
+            <th scope="row" style="width:200px">Gross Observed Volume</th>
+            <td style="width:250px">@Model.GOV</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Gross Standard Volume</th>
+            <td style="width:250px">*****</td>
+            <th scope="row" style="width:200px">Net Standard Volume</th>
+            <td style="width:250px">*****</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Available Room</th>
+            <td style="width:250px">@Model.GetAvailableRoom()</td>
+            <th scope="row" style="width:200px">Weight In Air</th>
+            <td style="width:250px">@Model.WIA</td>
+        </tr>
+        <tr>
+            <th scope="row" style="width:200px">Pipeline</th>
+            <td style="width:250px">*****</td>
+            <th scope="row" style="width:200px">Utilization</th>
+            <td style="width:250px">*****</td>
+        </tr>
+
+    </tbody>
+</table>
